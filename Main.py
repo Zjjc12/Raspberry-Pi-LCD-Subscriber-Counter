@@ -116,7 +116,7 @@ while True:
 
     # Write two lines of text.
 
-    draw.text((x, top),       "Pewdiepie: " + str(),  font=font, fill=255)
+    draw.text((x, top),       "Pewdiepie: " + str(pewSubs),  font=font, fill=255)
 
     # Display image.
     disp.image(image)
