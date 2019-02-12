@@ -42,11 +42,10 @@ def channels_list_by_username(service, **kwargs):
   results = service.channels().list(
     **kwargs
   ).execute()
-  
-    pewSubs = results['items'][0]['statistics']['subscriberCount']
+  pewSubs = results['items'][0]['statistics']['subscriberCount']
 
-    print('Pewdiepie has %s subscribers' %
-       (pewSubs))
+  print('Pewdiepie has %s subscribers' %
+    (pewSubs))
 
 
 if __name__ == '__main__':
