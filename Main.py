@@ -45,6 +45,16 @@ pURL = "https://www.googleapis.com/youtube/v3/channels?key="+key+"&id=UC-lHJZR3G
 tURL = "https://www.googleapis.com/youtube/v3/channels?key="+key+"&id=UCq-Fj5jknLsUf-MWSy4_brA&part=statistics";
 
 
+def GetSubs(url):
+  soup = urllib.urlopen(url)
+  markup = soup.read()
+
+  feed_json = json.loads(markup)
+  sub_count = feed_json["items"][0]["statistics"]["subscriberCount"]
+
+  return sub_count
+
+
 while True:
 
     if(count % 1000 == 0):
@@ -61,15 +71,6 @@ while True:
     led.draw_text2(0,0,"Pewdiepie: " + str(pSubs),1)
     led.draw_text2(0,16,"T-Seres: " + str(tSubs),1)
     led.draw_text2(16,32, str(difference),2)
-
-def GetSubs(url):
-  soup = urllib.urlopen(url)
-  markup = soup.read()
-
-  feed_json = json.loads(markup)
-  sub_count = feed_json["items"][0]["statistics"]["subscriberCount"]
-
-  return sub_count
 
 
 
