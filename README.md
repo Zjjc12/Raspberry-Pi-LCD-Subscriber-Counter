@@ -10,4 +10,6 @@ sudo python setup.py install
 sudo pip install wiringpi
 ```
 
+Edit main.py and input your youtubeapi key
+
 Then run python script "main.py"

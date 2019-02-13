@@ -39,7 +39,7 @@ pSubs = 0
 tSubs = 0
 difference = 0
 
-key = "AIzaSyBYNFKcZqt4uK1C5AcLzFpbz9hl8Uo6HLg"
+key = "ENTER YOUR KEY HERE"
 
 pURL = "https://www.googleapis.com/youtube/v3/channels?key="+key+"&id=UC-lHJZR3Gqxm24_Vd_AJ5Yw&part=statistics";
 tURL = "https://www.googleapis.com/youtube/v3/channels?key="+key+"&id=UCq-Fj5jknLsUf-MWSy4_brA&part=statistics";
