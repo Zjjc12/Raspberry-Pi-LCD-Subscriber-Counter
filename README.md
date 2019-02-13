@@ -10,4 +10,4 @@ sudo python setup.py install
 sudo pip install wiringpi
 ```
 
-Then run python script
+Then run python script "main.py"
