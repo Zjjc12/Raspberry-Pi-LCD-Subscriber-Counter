@@ -42,10 +42,9 @@ def channels_list_by_username(service, **kwargs):
   results = service.channels().list(
     **kwargs
   ).execute()
-  pewSubs = results['items'][0]['statistics']['subscriberCount']
 
-  print('Pewdiepie has %s subscribers' %
-    (pewSubs))
+  pewSubs = results['items'][0]['statistics']['subscriberCount']
+ 
 
 
 if __name__ == '__main__':
@@ -114,11 +113,21 @@ while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0,0,width,height), outline=0, fill=0)
 
+
+    os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
+    service = get_authenticated_service()
+    channels_list_by_username(service,
+      part='statistics',
+      forUsername='Pewdiepie')
+
+
+
     # Write two lines of text.
 
-    draw.text((x, top),       "Pewdiepie: " + str(pewSubs),  font=font, fill=255)
+    draw.text((x, top), "Pewdiepie: " + str(pewSubs),  font=font, fill=255)
+    print('Pewdiepie has %s subscribers' % (pewSubs))
 
     # Display image.
     disp.image(image)
     disp.display()
-    time.sleep(.1)
+    time.sleep(5)
