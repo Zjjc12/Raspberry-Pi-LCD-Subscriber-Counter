@@ -59,18 +59,19 @@ while True:
 
     if(count % 1000 == 0):
       pSubs = GetSubs(pURL)
-      tSubs = GetSubs(tURL)
+      tSubs = GetSubs(tURL)  
+      print('Pewdiepie has %s subscribers' % (pSubs))
+      print('T-Series has %s subscribers' % (tSubs))
+
+      difference = int(pSubs) - int(tSubs)
 
     count = count + 1
-
-    print('Pewdiepie has %s subscribers' % (pSubs))
-    print('T-Series has %s subscribers' % (tSubs))
-
-    difference = pSubs - tSubs
-
+    
     led.draw_text2(0,0,"Pewdiepie: " + str(pSubs),1)
     led.draw_text2(0,16,"T-Seres: " + str(tSubs),1)
     led.draw_text2(16,32, str(difference),2)
+
+    time.sleep(0.1)
 
 
 
