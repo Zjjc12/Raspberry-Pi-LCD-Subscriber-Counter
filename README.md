@@ -1,4 +1,4 @@
-Raspberry Pi LCD Subscriber Counter
+# Raspberry Pi LCD Subscriber Counter
 
 To install (Download dependencies)
 
